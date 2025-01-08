@@ -6,7 +6,6 @@ Install using Composer:
 composer require phphleb/webrotor-tests
 ```
 
-
 Running tests:
 
 ```bash
