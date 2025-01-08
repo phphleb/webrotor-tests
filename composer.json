@@ -1,0 +1,31 @@
+{
+    "name": "phphleb/webrotor-tests",
+    "description": "Tests for the asynchronous web server WebRotor",
+    "type": "library",
+    "keywords": [
+        "tests",
+        "php",
+        "web-server"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Foma Tuturov",
+            "email": "fomiash@yandex.ru"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0",
+        "phphleb/webrotor": "v1.0.0",
+        "phpstan/phpstan": "@stable",
+        "phpunit/phpunit": "@stable",
+        "nyholm/psr7": "@stable",
+        "nyholm/psr7-server": "@stable",
+        "guzzlehttp/guzzle": "@stable"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phphleb\\WebRotorTests\\Src\\": "/Src"
+         }
+    }
+}

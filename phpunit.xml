@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php">
+    <testsuites>
+        <testsuite name="start">
+            <directory>vendor/phphleb/webrotor-tests/Tests/Start</directory>
+        </testsuite>
+        <testsuite name="unit">
+            <directory>vendor/phphleb/webrotor-tests/Tests/Unit</directory>
+        </testsuite>
+        <testsuite name="feature">
+            <directory>vendor/phphleb/webrotor-tests/Tests/Feature</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
