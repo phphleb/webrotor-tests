@@ -23,8 +23,9 @@
         "guzzlehttp/guzzle": "@stable"
     },
     "autoload": {
-        "psr-4": {
-            "Phphleb\\WebRotorTests\\Src\\": "/Src"
-         }
+        "classmap": [
+            "Src/",
+            "Tests/"
+        ]
     }
 }
