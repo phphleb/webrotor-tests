@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Phphleb\\Webrotor\\Src\\": "Src/"
+            "Phphleb\\WebrotorTests\\Src\\": "Src/"
         },
         "classmap": [
             "Tests/"
