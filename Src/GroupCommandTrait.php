@@ -1,8 +1,8 @@
 <?php
 
-namespace Phphleb\WebRotorTests\Src;
+namespace Phphleb\WebrotorTests\Src;
 
-use Phphleb\WebRotor\Config;
+use Phphleb\Webrotor\Config;
 
 trait GroupCommandTrait
 {

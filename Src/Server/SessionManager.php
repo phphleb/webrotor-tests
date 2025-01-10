@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Phphleb\WebRotorTests\Src\Server;
+namespace Phphleb\WebrotorTests\Src\Server;
 
-use Phphleb\WebRotor\Src\Session\SessionManagerInterface;
+use Phphleb\Webrotor\Src\Session\SessionManagerInterface;
 
 /**
  * @author Foma Tuturov <fomiash@yandex.ru>

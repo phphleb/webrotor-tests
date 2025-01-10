@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phphleb\WebRotorTests\Tests\Start;
+namespace Phphleb\WebrotorTests\Tests\Start;
 
 use PHPUnit\Framework\TestCase;
 

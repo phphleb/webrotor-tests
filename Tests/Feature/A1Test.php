@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Phphleb\WebRotorTests\Src\Tests\Feature;
+namespace Phphleb\WebrotorTests\Src\Tests\Feature;
 
-use Phphleb\WebRotorTests\Src\CommandDto;
-use Phphleb\WebRotorTests\Src\ConfigTestTemplates;
-use Phphleb\WebRotorTests\Src\GroupCommandTrait;
-use Phphleb\WebRotorTests\Src\ResponseTestDto;
+use Phphleb\WebrotorTests\Src\CommandDto;
+use Phphleb\WebrotorTests\Src\ConfigTestTemplates;
+use Phphleb\WebrotorTests\Src\GroupCommandTrait;
+use Phphleb\WebrotorTests\Src\ResponseTestDto;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

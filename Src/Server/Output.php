@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Phphleb\WebRotorTests\Src\Server;
+namespace Phphleb\WebrotorTests\Src\Server;
 
-use Phphleb\WebRotorTests\Src\ResponseTestDto;
+use Phphleb\WebrotorTests\Src\ResponseTestDto;
 
 /**
  * @author Foma Tuturov <fomiash@yandex.ru>
  *
  * Implements the ability to override data output.
  */
-final class Output extends \Phphleb\WebRotor\Src\Process\Output
+final class Output extends \Phphleb\Webrotor\Src\Process\Output
 {
     /**
      * @var ResponseTestDto[]

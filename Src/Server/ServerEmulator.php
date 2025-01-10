@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Phphleb\WebRotorTests\Src\Server;
+namespace Phphleb\WebrotorTests\Src\Server;
 
-use Phphleb\WebRotor\Config;
-use Phphleb\WebRotor\Src\Handler\GuzzlePsr7Creator;
-use Phphleb\WebRotor\Src\Handler\NyholmPsr7Creator;
-use Phphleb\WebRotor\Src\Storage\InMemoryStorage;
-use Phphleb\WebRotor\WebRotor;
-use Phphleb\WebRotorTests\Src\ConfigTestTemplates;
-use Phphleb\WebRotorTests\Src\ResponseTestDto;
+use Phphleb\Webrotor\Config;
+use Phphleb\Webrotor\Src\Handler\GuzzlePsr7Creator;
+use Phphleb\Webrotor\Src\Handler\NyholmPsr7Creator;
+use Phphleb\Webrotor\Src\Storage\InMemoryStorage;
+use Phphleb\Webrotor\WebRotor;
+use Phphleb\WebrotorTests\Src\ConfigTestTemplates;
+use Phphleb\WebrotorTests\Src\ResponseTestDto;
 use Psr\Log\NullLogger;
 
 final class ServerEmulator

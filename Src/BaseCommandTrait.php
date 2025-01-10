@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Phphleb\WebRotorTests\Src;
+namespace Phphleb\WebrotorTests\Src;
 
-use Phphleb\WebRotorTests\Src\Server\ServerEmulator;
+use Phphleb\WebrotorTests\Src\Server\ServerEmulator;
 
 trait BaseCommandTrait
 {
