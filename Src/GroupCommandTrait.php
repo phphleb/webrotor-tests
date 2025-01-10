@@ -10,7 +10,7 @@ trait GroupCommandTrait
 
     protected $result = [];
 
-    protected function getResult(): array
+    protected function getExecResult(): array
     {
         return $this->result;
     }
