@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Phphleb\WebRotorTests\Tests\Start;
 
 use Phphleb\WebRotor\Config;
-use Phphleb\WebRotorTests\Src\BaseTestServer;
+use Phphleb\WebRotorTests\Src\BaseCommandTrait;
 use Phphleb\WebRotorTests\Src\ConfigTestTemplates;
 use Phphleb\WebRotorTests\Src\ResponseTestDto;
 use PHPUnit\Framework\TestCase;
@@ -14,7 +14,7 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class A1HealthCheckTest extends TestCase
 {
-    use BaseTestServer;
+    use BaseCommandTrait;
 
     /**
      * Basic request verification without running a worker.

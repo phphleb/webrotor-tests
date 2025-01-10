@@ -6,21 +6,21 @@ namespace Phphleb\WebRotorTests\Src;
 
 use Phphleb\WebRotorTests\Src\Server\ServerEmulator;
 
-trait BaseTestServer
+trait BaseCommandTrait
 {
     /**
      * @var ServerEmulator|null
      */
    private $server = null;
 
-   public function getNewServer(): ServerEmulator
+   protected function getNewServer(): ServerEmulator
    {
        $this->server = new ServerEmulator();
 
        return $this->server;
    }
 
-   public function getServer(): ServerEmulator
+   protected function getServer(): ServerEmulator
    {
        return $this->server;
    }
