@@ -15,7 +15,7 @@ use Psr\Log\NullLogger;
 
 final class ServerEmulator
 {
-    const PSR7_HANDLERS = [NyholmPsr7Creator::class, GuzzlePsr7Creator::class];
+    private const PSR7_HANDLERS = [NyholmPsr7Creator::class, GuzzlePsr7Creator::class];
 
     /**
      * @var array<string, array<int, array{0: ResponseTestDto, 1: ResponseTestDto}>>

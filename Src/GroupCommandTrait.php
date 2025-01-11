@@ -15,6 +15,17 @@ trait GroupCommandTrait
         return $this->result;
     }
 
+    protected function createHttpConfig(array $customParams): array
+    {
+        return array_merge(ConfigTestTemplates::EMPTY_HTTP_CONFIG, $customParams);
+
+    }
+
+    protected function createWorkerConfig(array $customParams): array
+    {
+        return array_merge(ConfigTestTemplates::EMPTY_WORKER_CONFIG, $customParams);
+    }
+
     /**
      * @param CommandDto[] $commands
      */

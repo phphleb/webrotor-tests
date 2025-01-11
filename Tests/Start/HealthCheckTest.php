@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class A1HealthCheckTest extends TestCase
+final class HealthCheckTest extends TestCase
 {
     use BaseCommandTrait;
 

@@ -11,23 +11,29 @@ class ConfigTestTemplates
 
     const EMPTY_HTTP_CONFIG = [
         'type' => self::HTTP,
-        'argv' => null,   // (array|null) if it's an array, then a worker is used.
-        'get' => [],      // $_GET server emulation.
-        'post' => [],     // $_POST server emulation.
-        'cookie' => [],   // $_COOKIE server emulation.
-        'session' => [],  // $_SESSION server emulation.
-        'env' => [],      // $_ENV server emulation.
-        'server' => [],   // $_SERVER server emulation.
+        'argv' => null,           // (array|null) if it's an array, then a worker is used.
+        'get' => [],              // $_GET server emulation.
+        'post' => [],             // $_POST server emulation.
+        'cookie' => [],           // $_COOKIE server emulation.
+        'session' => [],          // $_SESSION server emulation.
+        'env' => [],              // $_ENV server emulation.
+        'server' => [],           // $_SERVER server emulation.
+        'session_id' => 's-id',
+        'session_name' => 's-name',
+        'session_active' => false
     ];
 
     const EMPTY_WORKER_CONFIG = [
         'type' => self::WORKER,
-        'argv' => [],     // (array|null) if it's an array, then a worker is used.
-        'get' => [],      // $_GET server emulation.
-        'post' => [],     // $_POST server emulation.
-        'cookie' => [],   // $_COOKIE server emulation.
-        'session' => [],  // $_SESSION server emulation.
-        'env' => [],      // $_ENV server emulation.
-        'server' => [],   // $_SERVER server emulation.
+        'argv' => [],              // (array|null) if it's an array, then a worker is used.
+        'get' => [],               // $_GET server emulation.
+        'post' => [],              // $_POST server emulation.
+        'cookie' => [],            // $_COOKIE server emulation.
+        'session' => [],           // $_SESSION server emulation.
+        'env' => [],               // $_ENV server emulation.
+        'server' => [],            // $_SERVER server emulation.
+        'session_id' => 's-id',
+        'session_name' => 's-name',
+        'session_active' => false
     ];
 }

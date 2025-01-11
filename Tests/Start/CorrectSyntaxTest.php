@@ -6,7 +6,7 @@ namespace Phphleb\WebrotorTests\Tests\Start;
 
 use PHPUnit\Framework\TestCase;
 
-final class A1CorrectSyntaxTest extends TestCase
+final class CorrectSyntaxTest extends TestCase
 {
     private const DIRECTORY = __DIR__ . '/../../../webrotor';
 
