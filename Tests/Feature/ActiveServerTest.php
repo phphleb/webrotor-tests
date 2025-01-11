@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class A1Test extends TestCase
+final class ActiveServerTest extends TestCase
 {
     use GroupCommandTrait;
 
