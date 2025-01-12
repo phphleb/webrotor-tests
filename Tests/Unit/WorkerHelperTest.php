@@ -48,7 +48,7 @@ final class WorkerHelperTest extends TestCase
     public function testCheckIsOlderValid(): void
     {
         $key = '1-1660000000000000-10-1-x1000c500';
-        $type = 'worker-type';
+        $type = 'request';
         $startTime = 1660000010.0;
 
         $result = WorkerHelper::checkIsOlder($key, $type, $startTime);
@@ -56,10 +56,21 @@ final class WorkerHelperTest extends TestCase
         $this->assertTrue($result);
     }
 
-    public function testCheckIsOlderVersionValid(): void
+    public function testCheckIsOlderVersionRequestValid(): void
     {
         $key = '1-1660000000000000-10-12-x1000c500';
-        $type = 'worker-type';
+        $type = 'request';
+        $startTime = 1660000000.0;
+
+        $result = WorkerHelper::checkIsOlder($key, $type, $startTime, 12);
+
+        $this->assertFalse($result);
+    }
+
+    public function testCheckIsOlderVersionResponseValid(): void
+    {
+        $key = '1-1660000000000000-10-12-x1000c500';
+        $type = 'response';
         $startTime = 1660000000.0;
 
         $result = WorkerHelper::checkIsOlder($key, $type, $startTime, 12);
@@ -70,7 +81,7 @@ final class WorkerHelperTest extends TestCase
     public function testCheckIsOlderInvalidVersion(): void
     {
         $key = '1-1660000000000000-10-3-x1000c500';
-        $type = 'worker-type';
+        $type = 'request';
         $startTime = 1660000000.0;
 
         $result = WorkerHelper::checkIsOlder($key, $type, $startTime, 12);
@@ -80,7 +91,7 @@ final class WorkerHelperTest extends TestCase
 
     public function testCheckIsOlderInvalidType(): void
     {
-        $key = '1-1660000000-10-1-x1000c500';
+        $key = '1-1660000000000000-10-1-x1000c500';
         $type = 'worker';
         $startTime = 1660000010.0;
 
