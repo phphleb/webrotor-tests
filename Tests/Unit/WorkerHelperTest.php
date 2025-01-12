@@ -23,11 +23,11 @@ final class WorkerHelperTest extends TestCase
 
     public function testExtractWorkerDataValidData(): void
     {
-        $json = json_encode(['start' => 123.45, 'lifetime' => 60]);
+        $json = json_encode(['start' => 123.45, 'lifetime' => 60, 'version' => 1]);
 
         $result = WorkerHelper::extractWorkerData($json);
 
-        $this->assertSame(['start' => 123.45, 'lifetime' => 60], $result);
+        $this->assertSame(['start' => 123.45, 'lifetime' => 60, 'version' => 1], $result);
     }
 
     public function testExtractWorkerDataEmptyJson(): void
@@ -47,7 +47,7 @@ final class WorkerHelperTest extends TestCase
 
     public function testCheckIsOlderValid(): void
     {
-        $key = '1-1660000000-10-x1000c500';
+        $key = '1-1660000000-10-1-x1000c500';
         $type = 'worker-type';
         $startTime = 1660000010.0;
 
@@ -56,9 +56,31 @@ final class WorkerHelperTest extends TestCase
         $this->assertTrue($result);
     }
 
+    public function testCheckIsOlderVersionValid(): void
+    {
+        $key = '1-1660000000-10-12-x1000c500';
+        $type = 'worker-type';
+        $startTime = 1660000010.0;
+
+        $result = WorkerHelper::checkIsOlder($key, $type, $startTime, 12);
+
+        $this->assertTrue($result);
+    }
+
+    public function testCheckIsOlderInvalidVersion(): void
+    {
+        $key = '1-1660000000-10-3-x1000c500';
+        $type = 'worker-type';
+        $startTime = 1660000010.0;
+
+        $result = WorkerHelper::checkIsOlder($key, $type, $startTime, 12);
+
+        $this->assertFalse($result);
+    }
+
     public function testCheckIsOlderInvalidType(): void
     {
-        $key = '1-1660000000-10-x1000c500';
+        $key = '1-1660000000-10-1-x1000c500';
         $type = 'worker';
         $startTime = 1660000010.0;
 
