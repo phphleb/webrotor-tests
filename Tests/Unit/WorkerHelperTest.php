@@ -58,24 +58,24 @@ final class WorkerHelperTest extends TestCase
 
     public function testCheckIsOlderVersionValid(): void
     {
-        $key = '1-1660000000-10-12-x1000c500';
+        $key = '1-1660000001-10-12-x1000c500';
         $type = 'worker-type';
-        $startTime = 1660000010.0;
-
-        $result = WorkerHelper::checkIsOlder($key, $type, $startTime, 12);
-
-        $this->assertTrue($result);
-    }
-
-    public function testCheckIsOlderInvalidVersion(): void
-    {
-        $key = '1-1660000000-10-3-x1000c500';
-        $type = 'worker-type';
-        $startTime = 1660000010.0;
+        $startTime = 1660000000.0;
 
         $result = WorkerHelper::checkIsOlder($key, $type, $startTime, 12);
 
         $this->assertFalse($result);
+    }
+
+    public function testCheckIsOlderInvalidVersion(): void
+    {
+        $key = '1-1660000001-10-3-x1000c500';
+        $type = 'worker-type';
+        $startTime = 1660000000.0;
+
+        $result = WorkerHelper::checkIsOlder($key, $type, $startTime, 12);
+
+        $this->assertTrue($result);
     }
 
     public function testCheckIsOlderInvalidType(): void
