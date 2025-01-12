@@ -49,7 +49,7 @@ final class WorkerHelperTest extends TestCase
     {
         $key = '1-1660000000000000-10-1-x1000c500';
         $type = 'request';
-        $startTime = 1660000010.0;
+        $startTime = 1660000011.0;
 
         $result = WorkerHelper::checkIsOlder($key, $type, $startTime);
 
