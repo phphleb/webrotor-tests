@@ -5,9 +5,12 @@ declare(strict_types=1);
 namespace Phphleb\WebrotorTests\Src\Server;
 
 use Phphleb\Webrotor\Config;
+use Phphleb\Webrotor\Src\Exception\WebRotorComplianceException;
 use Phphleb\Webrotor\Src\Handler\GuzzlePsr7Creator;
 use Phphleb\Webrotor\Src\Handler\NyholmPsr7Creator;
 use Phphleb\Webrotor\Src\Storage\InMemoryStorage;
+use Phphleb\Webrotor\Src\Storage\SharedMemoryStorage;
+use Phphleb\Webrotor\Src\Storage\StorageInterface;
 use Phphleb\Webrotor\WebRotor;
 use Phphleb\WebrotorTests\Src\ConfigTestTemplates;
 use Phphleb\WebrotorTests\Src\ResponseTestDto;
@@ -23,13 +26,18 @@ final class ServerEmulator
     private $comparisonResults = [];
 
     /**
-     * @var InMemoryStorage|null
+     * @var StorageInterface|null
      */
     private $storage = null;
 
     public function __construct()
     {
-        $this->storage = new InMemoryStorage();
+        try {
+            // If possible, storage in RAM is used.
+            $this->storage = new SharedMemoryStorage();
+        } catch (WebRotorComplianceException $e) {
+            $this->storage = new InMemoryStorage();
+        }
     }
 
     /**
