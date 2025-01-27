@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": ">=7.2.0",
-        "phphleb/webrotor": "v1.1.1",
+        "phphleb/webrotor": "v1.1.2",
         "phpunit/phpunit": "@stable",
         "nyholm/psr7": "@stable",
         "nyholm/psr7-server": "@stable",
